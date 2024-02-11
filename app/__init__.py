@@ -120,5 +120,5 @@ Console.info(f"Version Number: {metadata.VERSION}")
 Console.info(f"Developer Contact => {metadata.CONTACT_INFO}")
 print("\n")
 Console.info("<" + "-" * 50 + ">")
-if not os.environ.get("REHMAN", False):
+if not os.environ.get("VIRCHUAL", False):
     time.sleep(3)
