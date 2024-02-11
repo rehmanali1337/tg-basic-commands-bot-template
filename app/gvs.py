@@ -1,4 +1,5 @@
 import os
+from warnings import warn
 
 INPUT_DIR = "Input"
 OUTPUT_DIR = "Output"
@@ -11,6 +12,13 @@ for d in START_DIRS:
 
 # Input Files
 
+
+TELEGRAM_API_ID = "1219125"
+TELEGRAM_API_HASH = "d15e36f952698015e9f8384b2d0c547d"
+
+
+if not TELEGRAM_API_HASH or not TELEGRAM_API_HASH:
+    warn("Missing Telegram API ID or HASH")
 
 STARTUP_FILES: list[str] = []
 

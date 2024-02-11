@@ -1,5 +1,5 @@
 import asyncio
-from app import Console
+from app import Console, gvs
 
 # from app_db.message import Message
 from telethon import TelegramClient  # pyright: ignore [reportMissingTypeStubs]
@@ -9,7 +9,7 @@ from commands import load_commands
 
 
 async def main() -> None:
-    bot = TelegramClient("bot", api_id=int(config.TELEGRAM_API_ID), api_hash=config.TELEGRAM_API_HASH)
+    bot = TelegramClient("bot", api_id=int(gvs.TELEGRAM_API_ID), api_hash=gvs.TELEGRAM_API_HASH)
     bot.parse_mode = "md"   # pyright: ignore
 
     await bot.start(bot_token=config.TELEGRAM_BOT_TOKEN)  # pyright: ignore
